@@ -1,7 +1,11 @@
 ## This first line will likely take a few seconds. Be patient!
 
-NEI <- readRDS("./data/summarySCC_PM25.rds")
-SCC <- readRDS("./data/Source_Classification_Code.rds")
+if(!exists("NEI")){
+  NEI <- readRDS("./data/summarySCC_PM25.rds")
+}
+if(!exists("SCC")){
+  SCC <- readRDS("./data/Source_Classification_Code.rds")
+}
 
 ### let's take a quick look at the data
 head(NEI)
@@ -13,21 +17,22 @@ head(SCC)
 
 aggregatedPM25TotalByYear <- aggregate(Emissions ~ year, NEI, sum)
 
-png('plot1.png', width = 1200, height = 900, 
+png('plot1.png', width = 480, height = 480, 
     units = "px")
 
 ### Taking a look at a couple of different graphs in one panel
-par(mfrow = c(1, 2))
+### par(mfrow = c(1, 2))
 
 barplot(height=aggregatedPM25TotalByYear$Emissions, 
         names.arg=aggregatedPM25TotalByYear$year, 
         xlab="years", ylab=expression('PM'[2.5]*' emissions'), 
         main=expression('Total PM'[2.5]*' emissions 1999-2008'))
 
-plot(aggregatedPM25TotalByYear, type="l", 
-        xlab="Year", 
-        ylab=expression('PM'[2.5]*' emissions'), 
-        main=expression('Total PM'[2.5]*' emissions 1999-2008'))
+### strictly following instructions for one plot
+### plot(aggregatedPM25TotalByYear, type="l", 
+###        xlab="Year", 
+###        ylab=expression('PM'[2.5]*' emissions'), 
+###        main=expression('Total PM'[2.5]*' emissions 1999-2008'))
 dev.off()
 
 ### Yes, emissions from PM2.5 have decreased in the U.S. from 1999 to 2008
