@@ -17,8 +17,7 @@ head(SCC)
 
 aggregatedPM25TotalByYear <- aggregate(Emissions ~ year, NEI, sum)
 
-png('plot1.png', width = 480, height = 480, 
-    units = "px")
+png('plot1.png')
 
 ### Taking a look at a couple of different graphs in one panel
 ### par(mfrow = c(1, 2))
