@@ -25,7 +25,7 @@ png('plot2.png')
 
 barplot(height=aggregatedPM25TotalByYear$Emissions, 
         names.arg=aggregatedPM25TotalByYear$year, 
-        xlab="years", ylab=expression('PM'[2.5]*' emissions'), 
+        xlab="Year", ylab=expression('PM'[2.5]*' emissions'), 
         main=expression('Total PM'[2.5]*' emissions in Baltimore City, MD 1999-2008'))
 dev.off()
 ### Yes, overall emissions from PM2.5 in Baltimore City, MD have decreased

@@ -24,7 +24,7 @@ png('plot1.png')
 
 barplot(height=aggregatedPM25TotalByYear$Emissions, 
         names.arg=aggregatedPM25TotalByYear$year, 
-        xlab="years", ylab=expression('PM'[2.5]*' emissions'), 
+        xlab="Year", ylab=expression('PM'[2.5]*' emissions'), 
         main=expression('Total PM'[2.5]*' emissions 1999-2008'))
 
 ### strictly following instructions for one plot

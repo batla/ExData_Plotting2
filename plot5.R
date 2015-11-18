@@ -28,7 +28,7 @@ aggregatedTotalByYear <- aggregate(Emissions ~ year, baltimoreCityNEIOnRoad, sum
 
 png("plot5.png", width=640, height=480)
 g <- ggplot(aggregatedTotalByYear, aes(factor(year), Emissions))
-g <- g + geom_bar(stat="identity") + xlab("year") + 
+g <- g + geom_bar(stat="identity") + xlab("Year") + 
   ylab(expression('Total PM'[2.5]*" emissions")) +
   ggtitle('Total emissions from motor vehicles in Baltimore City, MD 1999-2008')
 print(g)
