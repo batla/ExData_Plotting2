@@ -39,7 +39,6 @@ g <- g + geom_bar(stat="identity") +
 print(g)
 dev.off()
 
-### All but "point" sources saw a decrease in emissions from 1999 to 2008.
-### In 1999, "point"was the lowest PM25 emissions source, by 2008,
-### "point" rose to second highest, with "non-road" moving into the lowest PM25
-### emissions source
+### emissions from coal sources reduced overall from 1999-2008; however, aside
+### from a slight increase in 2005 from 2002, the next three years showed a 
+### dramatic decrease.
